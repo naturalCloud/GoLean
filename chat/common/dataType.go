@@ -7,7 +7,7 @@ type BaseUsers struct {
 	NickName string `json:"nick_name"` // 昵称
 }
 
-// 聊天室结构体
+// ChatRoom 聊天室结构体
 type ChatRoom struct {
 	RoomId       uint32            `json:"room_id"`       // 聊天室id
 	RoomName     string            `json:"room_name"`     // 聊天室名字

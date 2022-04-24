@@ -196,7 +196,7 @@ func (u *User) AddFriends(myUserId uint32, friendsUserIds []uint32) interfaces.E
 		}
 	}
 
-	userFriendIds := []uint32{}
+	var userFriendIds []uint32
 	for id, _ := range set {
 		userFriendIds = append(userFriendIds, id)
 	}
