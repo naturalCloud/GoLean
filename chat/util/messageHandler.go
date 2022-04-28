@@ -13,7 +13,7 @@ type MessageHandler struct {
 	MaxTaskQueueLen    uint32 // 任务队列最大长度
 }
 
-//添加路由到map集合 key 为msgId ,value 为 Router
+// AddRouterMap 添加路由到map集合 key 为msgId ,value 为 Router
 func (m *MessageHandler) AddRouterMap(msgType uint32, router interfaces.Router) {
 	if _, ok := m.MsgHandleMap[msgType]; ok {
 		zlog.Infof("current router exits %d", msgType)
@@ -35,7 +35,7 @@ func (m *MessageHandler) DoMessageHandle(request interfaces.Request) {
 	handler.PreHandle(request)
 }
 
-//StartWorkerPool() 方法是启动Worker工作池， 这里根据用户配置好
+// StarWorkPool StartWorkerPool() 方法是启动Worker工作池， 这里根据用户配置好
 //的 WorkerPoolSize 的数量来启动， 然后分别给每个Worker分配一
 //个 TaskQueue ， 然后用一个goroutine来承载一个Worker的工作业务。
 func (m *MessageHandler) StarWorkPool() {
@@ -74,7 +74,7 @@ func (m *MessageHandler) startOneWork(workId int, taskQueue chan interfaces.Requ
 
 }
 
-//将消息投递给某个worker进行处理
+// SendMsgToTaskQueue 将消息投递给某个worker进行处理
 func (m *MessageHandler) SendMsgToTaskQueue(request interfaces.Request) {
 
 	//StartOneWorker() 方法就是一个Worker的工作业务， 每个worker是不会退出的
