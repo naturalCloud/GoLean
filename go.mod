@@ -21,6 +21,7 @@ require (
 	github.com/smartystreets/assertions v1.2.0
 	github.com/smartystreets/goconvey v1.6.4
 	github.com/syyongx/php2go v0.9.4
+	github.com/ysmood/got v0.23.3
 	go.uber.org/zap v1.17.0
 	golang.org/x/net v0.0.0-20211029224645-99673261e6eb
 	google.golang.org/grpc v1.42.0
@@ -84,7 +85,6 @@ require (
 	github.com/vcaesar/imgo v0.30.0 // indirect
 	github.com/vcaesar/keycode v0.10.0 // indirect
 	github.com/vcaesar/tt v0.20.0 // indirect
-	github.com/ysmood/got v0.23.3 // indirect
 	github.com/yuin/goldmark v1.3.8 // indirect
 	go.opentelemetry.io/otel v0.14.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
