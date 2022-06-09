@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"flag"
-	"fmt"
 	"github.com/88250/lute"
 	"io"
 	"io/ioutil"
@@ -30,10 +29,9 @@ func main() {
 
 	engine := lute.New()
 
-	//解析正则表达式，如果成功返回解释器
-	reg1 := regexp.MustCompile(`^---([\d\D]*)---`)
-	if reg1 == nil {
-		fmt.Println("regexp err")
+	reg := regexp.MustCompile(`^---([\d\D]*)---`)
+	if reg == nil {
+		log.Fatalf("正则格式错误")
 		return
 	}
 
@@ -43,17 +41,17 @@ func main() {
 	all, _ := io.ReadAll(file)
 	originStr := string(all)
 
-	result1 := reg1.ReplaceAllStringFunc(originStr, func(s string) string {
+	result := reg.ReplaceAllStringFunc(originStr, func(s string) string {
 		return ""
 	})
 
 	builder := strings.Builder{}
-	builder.WriteString(reg1.FindString(originStr))
+	builder.WriteString(reg.FindString(originStr))
 
 	builder.WriteString("\r\n")
 	builder.WriteString("\r\n")
 
-	formatStr := engine.FormatStr("demo", result1)
+	formatStr := engine.FormatStr("demo", result)
 
 	builder.WriteString(formatStr)
 
