@@ -7,19 +7,17 @@ package service
 import (
 	"context"
 	v1 "gfDeomo/api/v1"
-	"gfDeomo/internal/logic/article"
 )
 
 type IArticle interface {
-	List(context.Context, v1.ContentGetListCommonReq) ([]v1.ArticleIndexRes, error)
+	List(ctx context.Context, req v1.ContentGetListCommonReq) (v1.ArticleIndexRes, error)
 }
 
 var localArticle IArticle
 
 func Article() IArticle {
 	if localArticle == nil {
-		RegisterArticle(article.New())
-		//panic("implement not found for interface IArticle, forgot register?")
+		panic("implement not found for interface IArticle, forgot register?")
 	}
 	return localArticle
 }

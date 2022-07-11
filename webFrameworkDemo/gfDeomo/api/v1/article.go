@@ -1,6 +1,10 @@
 package v1
 
-import "github.com/gogf/gf/v2/frame/g"
+import (
+	"gfDeomo/internal/model/entity"
+
+	"github.com/gogf/gf/v2/frame/g"
+)
 
 type ArticleIndexReq struct {
 	g.Meta `path:"/article" method:"get" tags:"文章" summary:"展示Article列表页面"`
@@ -16,5 +20,5 @@ type ContentGetListCommonReq struct {
 type ArticleIndexRes struct {
 	g.Meta `mime:"application/json"`
 
-	ArticleId string `json:"articleId"`
+	Data []entity.Articles
 }

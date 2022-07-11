@@ -5,7 +5,9 @@
 package dao
 
 import (
+	"context"
 	"gfDeomo/internal/dao/internal"
+	"gfDeomo/internal/model/entity"
 )
 
 // internalArticlesDao is internal type for wrapping internal DAO implements.
@@ -25,3 +27,17 @@ var (
 )
 
 // Fill with you ideas below.
+
+func (a articlesDao) Get(ctx context.Context) []entity.Articles {
+	result, _ := a.Ctx(ctx).Where("id > ?", 0).All()
+
+	articles := make([]entity.Articles, result.Len())
+
+	for _, record := range result {
+		var s entity.Articles
+		record.Struct(&s)
+		articles = append(articles, s)
+	}
+
+	return articles
+}
