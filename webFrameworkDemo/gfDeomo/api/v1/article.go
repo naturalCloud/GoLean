@@ -7,8 +7,8 @@ import (
 )
 
 type ArticleIndexReq struct {
-	g.Meta `path:"/article" method:"get" tags:"文章" summary:"展示Article列表页面"`
-	ContentGetListCommonReq
+	g.Meta `path:"/index2" method:"get" tags:"Article" summary:"展示Article列表页面"`
+	//ContentGetListCommonReq
 }
 
 type ContentGetListCommonReq struct {
@@ -20,5 +20,5 @@ type ContentGetListCommonReq struct {
 type ArticleIndexRes struct {
 	g.Meta `mime:"application/json"`
 
-	Data []entity.Articles
+	Data []entity.Articles `json:"data"`
 }

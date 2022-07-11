@@ -20,6 +20,7 @@ var (
 			s := g.Server()
 
 			s.Use(middleware.ExceptionHandle(ctx))
+			s.Use(ghttp.MiddlewareHandlerResponse)
 
 			s.Group("/hello", func(group *ghttp.RouterGroup) {
 				group.Bind(

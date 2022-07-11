@@ -33,10 +33,11 @@ func (a articlesDao) Get(ctx context.Context) []entity.Articles {
 
 	articles := make([]entity.Articles, result.Len())
 
-	for _, record := range result {
+	for index, record := range result {
+
 		var s entity.Articles
 		record.Struct(&s)
-		articles = append(articles, s)
+		articles[index] = s
 	}
 
 	return articles

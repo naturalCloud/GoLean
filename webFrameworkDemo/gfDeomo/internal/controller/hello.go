@@ -2,10 +2,11 @@ package controller
 
 import (
 	"context"
-	"github.com/gogf/gf/v2/frame/g"
+	v1 "gfDeomo/api/v1"
+
 	"github.com/gogf/gf/v2/net/ghttp"
 
-	"gfDeomo/api/v1"
+	"github.com/gogf/gf/v2/frame/g"
 )
 
 var (
