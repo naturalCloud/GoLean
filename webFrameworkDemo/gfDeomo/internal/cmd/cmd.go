@@ -3,6 +3,7 @@ package cmd
 import (
 	"context"
 	"gfDeomo/internal/middleware"
+
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
@@ -29,6 +30,7 @@ var (
 				group.Bind(
 					controller.Article)
 			})
+			s.EnableAdmin()
 			s.Run()
 			return nil
 		},

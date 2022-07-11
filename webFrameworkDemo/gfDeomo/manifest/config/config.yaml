@@ -2,6 +2,7 @@ server:
   address:     ":8000"
   openapiPath: "/api.json"
   swaggerPath: "/swagger"
+  graceful: true
 
 logger:
   level : "all"
@@ -12,4 +13,8 @@ database:
   default:
     type:  "mysql"
     link:  "root:123456@tcp(192.168.50.130:3307)/solo"
+
+
+
+
 
