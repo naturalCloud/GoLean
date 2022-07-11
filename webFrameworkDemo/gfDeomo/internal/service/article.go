@@ -5,20 +5,21 @@
 package service
 
 import (
-	"gfDeomo/internal/model/entity"
-
-	"github.com/gogf/gf/v2/net/ghttp"
+	"context"
+	v1 "gfDeomo/api/v1"
+	"gfDeomo/internal/logic/article"
 )
 
 type IArticle interface {
-	Index(r *ghttp.Request, articles entity.Articles) bool
+	List(context.Context, v1.ContentGetListCommonReq) ([]v1.ArticleIndexRes, error)
 }
 
 var localArticle IArticle
 
 func Article() IArticle {
 	if localArticle == nil {
-		panic("implement not found for interface IArticle, forgot register?")
+		RegisterArticle(article.New())
+		//panic("implement not found for interface IArticle, forgot register?")
 	}
 	return localArticle
 }

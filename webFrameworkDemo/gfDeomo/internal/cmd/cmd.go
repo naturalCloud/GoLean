@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"context"
-
+	"gfDeomo/internal/middleware"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
@@ -17,11 +17,17 @@ var (
 		Brief: "start http server",
 		Func: func(ctx context.Context, parser *gcmd.Parser) (err error) {
 			s := g.Server()
-			s.Group("/", func(group *ghttp.RouterGroup) {
-				group.Middleware(ghttp.MiddlewareHandlerResponse)
+
+			s.Use(middleware.ExceptionHandle(ctx))
+
+			s.Group("/hello", func(group *ghttp.RouterGroup) {
 				group.Bind(
-					controller.Hello,
-				)
+					controller.Hello)
+			})
+
+			s.Group("/article", func(group *ghttp.RouterGroup) {
+				group.Bind(
+					controller.Article)
 			})
 			s.Run()
 			return nil

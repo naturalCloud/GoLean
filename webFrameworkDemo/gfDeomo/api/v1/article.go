@@ -12,3 +12,9 @@ type ContentGetListCommonReq struct {
 	CategoryId uint   `json:"cate"   in:"query" dc:"栏目ID"`
 	Sort       int    `json:"sort"   in:"query" dc:"排序类型(0:最新, 默认。1:活跃, 2:热度)"`
 }
+
+type ArticleIndexRes struct {
+	g.Meta `mime:"application/json"`
+
+	ArticleId string `json:"articleId"`
+}

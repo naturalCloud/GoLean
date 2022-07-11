@@ -1,25 +1,21 @@
 package article
 
 import (
-	"gfDeomo/internal/model/entity"
-	"gfDeomo/internal/service"
-
-	"github.com/gogf/gf/v2/net/ghttp"
+	"context"
+	v1 "gfDeomo/api/v1"
 )
-
-type sArticle struct{}
-
-var articleIns = New()
 
 func New() *sArticle {
 	return &sArticle{}
 }
 
-func init() {
-	service.RegisterArticle(articleIns)
-}
+type sArticle struct{}
 
-// Abc    aaa
-func (a *sArticle) Index(r *ghttp.Request, articles entity.Articles) bool {
-	return false
+// List 文章列表
+func (a *sArticle) List(ctx context.Context, req v1.ContentGetListCommonReq) ([]v1.ArticleIndexRes, error) {
+	return []v1.ArticleIndexRes{
+		{
+			ArticleId: "id",
+		},
+	}, nil
 }
