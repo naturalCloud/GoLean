@@ -22,3 +22,4 @@ temp/
 ../../bee_demo/lastupdate.tmp
 main
 routers/commentsRouter*.go
+bee_demo
