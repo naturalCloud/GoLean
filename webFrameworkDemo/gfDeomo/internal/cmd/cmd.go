@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"fmt"
 	"gfDeomo/internal/middleware"
 
 	"github.com/gogf/gf/v2/frame/g"
@@ -31,6 +32,8 @@ var (
 				group.Bind(
 					controller.Article)
 			})
+
+			fmt.Println(11111)
 			s.EnableAdmin()
 			s.Run()
 			return nil
