@@ -10,5 +10,6 @@ func init() {
 
 	beego.Router("/api/articles", &controllers.MainController{}, "get:ArticleList")
 	beego.CtrlGet("/api/article/get", (*controllers.MainController).ArticleList)
+	beego.CtrlPost("/api/article/create", (*controllers.ArticleController).Add)
 
 }
