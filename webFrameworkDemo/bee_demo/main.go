@@ -3,6 +3,7 @@ package main
 import (
 	_ "bee_demo/routers"
 	"fmt"
+
 	"github.com/beego/beego/v2/client/orm"
 	beego "github.com/beego/beego/v2/server/web"
 	_ "github.com/go-sql-driver/mysql"
@@ -27,7 +28,10 @@ func init() {
 		panic(err)
 	}
 
-	orm.RunSyncdb("default", true, false)
+	err = orm.RunSyncdb("default", true, false)
+	if err != nil {
+		panic(err)
+	}
 
 }
 func main() {
