@@ -3,7 +3,7 @@ module GoLearn
 go 1.18
 
 require (
-	fyne.io/fyne/v2 v2.1.3
+	fyne.io/fyne/v2 v2.2.2
 	github.com/88250/lute v1.7.3
 	github.com/PuerkitoBio/goquery v1.6.1
 	github.com/bytedance/sonic v1.2.0
