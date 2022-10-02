@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"image/color"
 	"time"
 
@@ -26,6 +27,7 @@ func main() {
 		rect.Refresh()
 	}()
 
+	fmt.Println(1111)
 	myWindow.Resize(fyne.NewSize(100, 100))
 	myWindow.ShowAndRun()
 }
