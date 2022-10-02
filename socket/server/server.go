@@ -62,5 +62,5 @@ func (s *Server) Reader(buff []byte, size int) {
 }
 
 func (s *Server) Writer(conn net.Conn) {
-	conn.Write([]byte("hello word server\n"))
+	conn.Write([]byte("1"))
 }

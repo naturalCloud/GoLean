@@ -1,23 +1,31 @@
 package main
 
 import (
+	"image/color"
+	"time"
+
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
-	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/widget"
+	"fyne.io/fyne/v2/canvas"
 )
 
 func main() {
-	a := app.New()
-	w := a.NewWindow("Hello")
-	w.FullScreen()
 
-	hello := widget.NewLabel("Hello Fyne!")
-	w.SetContent(container.NewVBox(
-		hello,
-		widget.NewButton("Hi!", func() {
-			hello.SetText("Welcome :)")
-		}),
-	))
+	myApp := app.New()
+	myWindow := myApp.NewWindow("Canvas")
+	myCanvas := myWindow.Canvas()
 
-	w.ShowAndRun()
+	blue := color.NRGBA{R: 0, G: 0, B: 180, A: 255}
+	rect := canvas.NewRectangle(blue)
+	myCanvas.SetContent(rect)
+
+	go func() {
+		time.Sleep(time.Second)
+		green := color.NRGBA{R: 0, G: 180, B: 0, A: 255}
+		rect.FillColor = green
+		rect.Refresh()
+	}()
+
+	myWindow.Resize(fyne.NewSize(100, 100))
+	myWindow.ShowAndRun()
 }
