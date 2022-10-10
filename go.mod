@@ -11,7 +11,7 @@ require (
 	github.com/cloudflare/tableflip v1.2.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/go-basic/uuid v1.0.0
-	github.com/go-redis/redis/v8 v8.4.2
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/go-vgo/robotgo v0.100.10
 	github.com/jedib0t/go-pretty/v6 v6.0.5
@@ -57,6 +57,7 @@ require (
 	github.com/gobwas/ws v1.1.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/goki/freetype v0.0.0-20181231101311-fa8a33aabaff // indirect
+	github.com/golang-module/carbon/v2 v2.1.9 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect

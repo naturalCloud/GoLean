@@ -27,7 +27,7 @@
 17. [序列化和反序列化](serialize/main.go)
 18. [反射](reflect/main.go)
 19. [网络编程](socket/main.go)
-20. [redis测试](redisTest/main.go)
+20. [redis测试](redisApplication/main.go)
 21. [面试题](interviewQuetstion)
 22. [go平滑重启](smoothReload/main.go)
 23. [无头浏览器爬虫](chrome/main.go)
