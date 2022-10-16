@@ -21,7 +21,7 @@ require (
 	github.com/smartystreets/goconvey v1.6.4
 	github.com/syyongx/php2go v0.9.4
 	github.com/ysmood/got v0.23.3
-	go.uber.org/zap v1.17.0
+	go.uber.org/zap v1.23.0
 	golang.org/x/net v0.0.0-20211029224645-99673261e6eb
 	google.golang.org/grpc v1.42.0
 	google.golang.org/protobuf v1.27.1
@@ -81,7 +81,7 @@ require (
 	github.com/shirou/gopsutil v3.21.10+incompatible // indirect
 	github.com/srwiley/oksvg v0.0.0-20200311192757-870daf9aa564 // indirect
 	github.com/srwiley/rasterx v0.0.0-20200120212402-85cb7272f5e9 // indirect
-	github.com/stretchr/testify v1.7.2 // indirect
+	github.com/stretchr/testify v1.8.0 // indirect
 	github.com/tevino/abool v1.2.0 // indirect
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/tklauser/numcpus v0.3.0 // indirect
@@ -92,8 +92,8 @@ require (
 	github.com/vcaesar/tt v0.20.0 // indirect
 	github.com/yuin/goldmark v1.4.1 // indirect
 	go.opentelemetry.io/otel v0.14.0 // indirect
-	go.uber.org/atomic v1.7.0 // indirect
-	go.uber.org/multierr v1.6.0 // indirect
+	go.uber.org/atomic v1.10.0 // indirect
+	go.uber.org/multierr v1.8.0 // indirect
 	golang.org/x/arch v0.0.0-20220412001346-fc48f9fe4c15 // indirect
 	golang.org/x/image v0.0.0-20220601225756-64ec528b34cd // indirect
 	golang.org/x/mobile v0.0.0-20211207041440-4e6c2922fdee // indirect
