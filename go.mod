@@ -6,7 +6,7 @@ require (
 	fyne.io/fyne/v2 v2.2.3
 	github.com/88250/lute v1.7.3
 	github.com/PuerkitoBio/goquery v1.6.1
-	github.com/bytedance/sonic v1.2.0
+	github.com/bytedance/sonic v1.5.0
 	github.com/chromedp/chromedp v0.7.7
 	github.com/cloudflare/tableflip v1.2.2
 	github.com/davecgh/go-spew v1.1.1
@@ -14,6 +14,7 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/go-vgo/robotgo v0.100.10
+	github.com/golang-module/carbon/v2 v2.1.9
 	github.com/jedib0t/go-pretty/v6 v6.0.5
 	github.com/jwalton/gchalk v1.0.3
 	github.com/olekukonko/tablewriter v0.0.5
@@ -57,7 +58,6 @@ require (
 	github.com/gobwas/ws v1.1.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/goki/freetype v0.0.0-20181231101311-fa8a33aabaff // indirect
-	github.com/golang-module/carbon/v2 v2.1.9 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
@@ -91,7 +91,6 @@ require (
 	github.com/vcaesar/keycode v0.10.0 // indirect
 	github.com/vcaesar/tt v0.20.0 // indirect
 	github.com/yuin/goldmark v1.4.1 // indirect
-	go.opentelemetry.io/otel v0.14.0 // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
 	golang.org/x/arch v0.0.0-20220412001346-fc48f9fe4c15 // indirect
