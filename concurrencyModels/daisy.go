@@ -9,7 +9,6 @@ func f(left, right chan int) {
 }
 
 // Whispers 击鼓传花模式
-//
 func Whispers() {
 	const n = 10000
 	leftmost := make(chan int)

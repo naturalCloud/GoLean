@@ -5,9 +5,9 @@ import (
 	"strings"
 )
 
-//数组
-//是一种线性表的数据结构.用一组连续的内存空间,存储一组具有相同类型的数据
-//go 的数组 `[5]int{..}` `[...]string{...}`
+// 数组
+// 是一种线性表的数据结构.用一组连续的内存空间,存储一组具有相同类型的数据
+// go 的数组 `[5]int{..}` `[...]string{...}`
 func main() {
 
 	/*声明数组方法*/
@@ -53,7 +53,7 @@ func main() {
 	fmt.Println(rotateArr([]int{4, 34, 78, 90, 8}))
 }
 
-//遍历数组
+// 遍历数组
 func traversalArr(arr [4]int) {
 	//常规遍历方法
 	for i := 0; i < len(arr); i++ {
@@ -71,7 +71,7 @@ func traversalArr(arr [4]int) {
 	}
 }
 
-//数组指针
+// 数组指针
 func arrayPointer(arrP *[4]int) {
 
 	arrP[1] = 4
@@ -82,7 +82,7 @@ func arrayPointer(arrP *[4]int) {
 	fmt.Println(&arrP[3])
 }
 
-//翻转数组
+// 翻转数组
 func rotateArr(arr []int) []int {
 
 	tmp := 0

@@ -47,7 +47,7 @@ func demo(paramA, paramB int) interface{} {
 
 }
 
-//可变参数
+// 可变参数
 func sum(number ...int) int {
 	result := 0
 
@@ -59,7 +59,7 @@ func sum(number ...int) int {
 
 }
 
-//多返回值 , 返回值变量名
+// 多返回值 , 返回值变量名
 func moreReturn(a, b int) (value1, value2 int) {
 
 	value1 = a * b
@@ -69,19 +69,19 @@ func moreReturn(a, b int) (value1, value2 int) {
 
 }
 
-//函数当成参数,参数op为函数,可指定该函数的具体规则
+// 函数当成参数,参数op为函数,可指定该函数的具体规则
 func functionParam(op func(a, b int) int, x, y int) int {
 
 	return op(x, y) + functionParamA(5, 6)
 }
 
-//定义一个函数,直接传入函数名
+// 定义一个函数,直接传入函数名
 func functionParamA(w, x int) int {
 
 	return w*w + x*x
 }
 
-//闭包函数
+// 闭包函数
 func closure() func() {
 	i := 0
 	return func() {

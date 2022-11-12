@@ -18,12 +18,12 @@ func (r *Request) GetConn() interfaces.Connection {
 	return r.conn
 }
 
-//获取请求消息的数据
+// 获取请求消息的数据
 func (r *Request) GetData() []byte {
 	return r.msg.GetData()
 }
 
-//获取请求消息的Id
+// 获取请求消息的Id
 func (r *Request) GetMsgType() uint32 {
 	return r.msg.GetMsgType()
 }

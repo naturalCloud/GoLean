@@ -36,12 +36,12 @@ func main() {
 
 }
 
-//函数调用,传递值
+// 函数调用,传递值
 func passByVal(param int) {
 	fmt.Println(`调用函数 变量param的内存地址 `, &param)
 }
 
-//传递指针
+// 传递指针
 func passByRef(param *string) {
 	//更改指针所指的值
 	*param = `ha ha ha`

@@ -1,6 +1,6 @@
 package interfaces
 
-//链接管理模块
+// 链接管理模块
 type ConnectionManage interface {
 	//添加链接
 	AddConn(conn Connection)

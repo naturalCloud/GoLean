@@ -91,7 +91,7 @@ func main() {
 	typeConversion()
 }
 
-//强制类型转换
+// 强制类型转换
 func typeConversion() {
 	//数字字符串转数字
 	numStr := `123456`

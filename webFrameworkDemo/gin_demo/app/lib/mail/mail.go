@@ -4,10 +4,11 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net"
 	"net/smtp"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 type Mail struct {
@@ -45,13 +46,13 @@ func NewMail(host, pwd, mailUser string, port int) (*Mail, error) {
 	return mail, nil
 }
 
-//发送者
+// 发送者
 func (m *Mail) From(from string) *Mail {
 	m.from = from + `<` + m.mailUser + `>`
 	return m
 }
 
-//make  a smtp client
+// make  a smtp client
 func (m *Mail) sslClient() (*smtp.Client, error) {
 	addr := fmt.Sprintf("%s:%d", m.host, m.port)
 	conn, err := tls.Dial("tcp", addr, nil)
@@ -63,7 +64,7 @@ func (m *Mail) sslClient() (*smtp.Client, error) {
 	return smtp.NewClient(conn, host)
 }
 
-//构建auth
+// 构建auth
 func (m *Mail) buildAuth() {
 	m.auth = smtp.PlainAuth(
 		"",
@@ -73,7 +74,7 @@ func (m *Mail) buildAuth() {
 	)
 }
 
-//设置发信人
+// 设置发信人
 func (m *Mail) To(user []string) *Mail {
 	m.to = user
 	return m
@@ -89,7 +90,7 @@ func (m *Mail) Content(msg string) *Mail {
 	return m
 }
 
-//设置消息
+// 设置消息
 func (m *Mail) buildMsg() {
 
 	header := map[string]string{

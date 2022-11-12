@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//闭包函数
+// 闭包函数
 func adder() func(int) int {
 
 	return func(i int) int {

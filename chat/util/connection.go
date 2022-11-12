@@ -78,7 +78,7 @@ func (c *Connection) Start() {
 	}
 }
 
-//读取任务携程
+// 读取任务携程
 func (c *Connection) StartReader() {
 
 	zlog.Infof(
@@ -133,7 +133,7 @@ func (c *Connection) StartReader() {
 
 }
 
-//停止服务
+// 停止服务
 func (c *Connection) Stop() {
 	zlog.Warnf("conn stop connId %d ", c.ConnId)
 	//链接已经关闭
@@ -167,19 +167,19 @@ func (c *Connection) Stop() {
 
 }
 
-//获取当前链接
+// 获取当前链接
 func (c *Connection) GetTcpConnection() *net.TCPConn {
 
 	return c.Conn
 }
 
-//获取当前链接远程地址
+// 获取当前链接远程地址
 func (c *Connection) RemoteAddr() net.Addr {
 
 	return c.Conn.RemoteAddr()
 }
 
-//发送数据
+// 发送数据
 func (c *Connection) SendMsg(msgId uint32, data []byte) error {
 
 	if c.IsClosed {
@@ -199,12 +199,12 @@ func (c *Connection) SendMsg(msgId uint32, data []byte) error {
 	return nil
 }
 
-//获取当前链接id
+// 获取当前链接id
 func (c *Connection) GetConnId() uint32 {
 	return c.ConnId
 }
 
-//写数据协程
+// 写数据协程
 func (c *Connection) StartWriter() {
 	zlog.Info("[ writer Goroutine running .......... ]")
 	defer zlog.Infof(

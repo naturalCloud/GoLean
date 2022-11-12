@@ -12,7 +12,7 @@ type UserFriendsRoute struct {
 	response friends.UserFriendsResponse
 }
 
-//处理业务中前钩子
+// 处理业务中前钩子
 func (f *UserFriendsRoute) Handle(request interfaces.Request) {
 	var response friends.UserFriendsResponse
 	f.UnmarshalRequest(request, &response)
@@ -42,7 +42,7 @@ func (f *UserFriendsRoute) AfterBusinessHandle() {
 	f.response = friends.UserFriendsResponse{}
 }
 
-//--------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------
 type FriendsAddRoute struct {
 	util.BasRouter
 	response friends.FriendsAddResponse

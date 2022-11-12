@@ -11,7 +11,7 @@ type LoginResponseRoute struct {
 	response login.ResponseLogin
 }
 
-//处理业务中前钩子
+// 处理业务中前钩子
 func (r *LoginResponseRoute) Handle(request interfaces.Request) {
 	var response login.ResponseLogin
 	r.UnmarshalRequest(request, &response)
@@ -25,7 +25,7 @@ func (r *LoginResponseRoute) Handle(request interfaces.Request) {
 
 }
 
-//处理业务后钩子
+// 处理业务后钩子
 func (r *LoginResponseRoute) PostHandle(request interfaces.Request) {
 }
 

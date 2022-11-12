@@ -22,5 +22,5 @@ type Connection interface {
 	GetConnId() uint32
 }
 
-//连处理函数
+// 连处理函数
 type HandelFun func(*net.TCPConn, []byte, uint32) error

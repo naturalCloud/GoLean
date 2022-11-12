@@ -5,18 +5,18 @@ import (
 	"fmt"
 )
 
-//结构体
+// 结构体
 type treeNode struct {
 	value       int
 	left, right *treeNode
 }
 
-//设置value
+// 设置value
 func (this *treeNode) setValue(value int) {
 	this.value = value
 }
 
-//归属结构体的方法
+// 归属结构体的方法
 func (this *treeNode) print() {
 
 	fmt.Print(this.value)
@@ -34,7 +34,7 @@ func (this *treeNode) travels() {
 	this.right.travels()
 }
 
-//创建树
+// 创建树
 func createNode(value int) *treeNode {
 	return &treeNode{value: value}
 }

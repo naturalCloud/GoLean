@@ -1,6 +1,5 @@
 package interfaces
 
-//
 type Request interface {
 	// GetConn 获取链接
 	GetConn() Connection

@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-//map
+// map
 func main() {
 	//声明 map
 	//语法 map[type]type{}

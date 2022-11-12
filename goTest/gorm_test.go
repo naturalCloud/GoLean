@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-//逻辑测试
+// 逻辑测试
 func TestFun(t *testing.T) {
 	test := []struct{ a, b, c int }{
 		{3, 4, 6},
@@ -23,8 +23,8 @@ func TestFun(t *testing.T) {
 
 }
 
-//性能测试 go test -bench . -cpuprofile cpu.out 生成性能宝宝
-//go tool pprof cpu.out  分析cpu文件
+// 性能测试 go test -bench . -cpuprofile cpu.out 生成性能宝宝
+// go tool pprof cpu.out  分析cpu文件
 // web 生成函数调用图
 func BenchmarkTest(b *testing.B) {
 
@@ -33,7 +33,7 @@ func BenchmarkTest(b *testing.B) {
 	}
 }
 
-//测试http服务器
+// 测试http服务器
 func TestHttp(t *testing.T) {
 	http.HandleFunc(`/index`, response)
 	log.Fatal(http.ListenAndServe(":8080", nil).Error())

@@ -27,7 +27,7 @@ func (c *ConnectionManager) AddConn(conn interfaces.Connection) {
 
 }
 
-//删除链接
+// 删除链接
 func (c *ConnectionManager) RemoveConn(conn interfaces.Connection) {
 	//添加写锁
 	c.connLock.Lock()
@@ -43,7 +43,7 @@ func (c *ConnectionManager) RemoveConn(conn interfaces.Connection) {
 
 }
 
-//获取当前链接
+// 获取当前链接
 func (c *ConnectionManager) GetConn(connId uint32) (interfaces.Connection, error) {
 	//添加读锁getMap
 	c.connLock.RLock()
@@ -55,12 +55,12 @@ func (c *ConnectionManager) GetConn(connId uint32) (interfaces.Connection, error
 	return nil, errors.New(fmt.Sprintf("connId %d not found", connId))
 }
 
-//获取链接数
+// 获取链接数
 func (c *ConnectionManager) Len() int {
 	return len(c.connectionsMap)
 }
 
-//清理链接
+// 清理链接
 func (c *ConnectionManager) ClearConn() {
 	//添加写锁
 	c.connLock.Lock()

@@ -60,9 +60,9 @@ service Life {
   rpc study(StudyRequest) returns (StudyResponse);
 }
 
-message WorkRequest { repeated string tools = 1; }
+message WorkRequest {repeated string tools = 1;}
 
-message WorkResponse { float money = 1; }
+message WorkResponse {float money = 1;}
 
 message StudyRequest {
   string subject = 1;

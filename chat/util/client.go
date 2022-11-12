@@ -85,7 +85,7 @@ func (c *Client) CallOnConnStop(connection interfaces.Connection) {
 	}
 }
 
-//获取链接管理器
+// 获取链接管理器
 func (c *Client) GetConnManager() interfaces.ConnectionManage {
 	return c.connManager
 }

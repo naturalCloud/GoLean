@@ -27,7 +27,7 @@ func main() {
 	fmt.Println(loopForNormal())
 }
 
-//if流程控制
+// if流程控制
 func branchIf() {
 	//读取文件
 	contents, err := ioutil.ReadFile(file_name)
@@ -48,7 +48,7 @@ func branchIf() {
 
 }
 
-//switch 分之 ,和其他语言的switch 分之不同,没有break
+// switch 分之 ,和其他语言的switch 分之不同,没有break
 func branchSwitch(a, b int, op string) int {
 	//result := 0;
 	var result int
@@ -67,7 +67,7 @@ func branchSwitch(a, b int, op string) int {
 	return result
 }
 
-//switch 另外一种写法
+// switch 另外一种写法
 func branchSwitch2(score int) string {
 
 	if score < 0 || score > 100 {
@@ -89,7 +89,7 @@ func branchSwitch2(score int) string {
 	return `成绩等级是 --- ` + msg
 }
 
-//for循环 10进制转2机制
+// for循环 10进制转2机制
 func loopFor(n int) string {
 	//for循环
 	binary := ``
@@ -104,7 +104,7 @@ func loopFor(n int) string {
 	return binary
 }
 
-//while 循环
+// while 循环
 func loopFor1() {
 	//while 循环
 	n := 0
@@ -114,14 +114,14 @@ func loopFor1() {
 	}
 }
 
-//死循环
+// 死循环
 func loopFor2() {
 	for {
 		fmt.Println(`helloWord`)
 	}
 }
 
-//正常循环
+// 正常循环
 func loopForNormal() int {
 
 	sum := 0

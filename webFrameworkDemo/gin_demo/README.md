@@ -1,9 +1,10 @@
 ## 简易http框架封装
 
-
 > 持续迭代封装一个http框架,学习,总结,迭代.
 > 感谢以下优秀的开源类库
+
 ### 使用了以下开源库
+
 ```text
 
     github.com/gin-gonic/gin v1.5.0
@@ -20,6 +21,7 @@
 ```
 
 ### todo
+
 1. 数据库日志traceId追踪
 2. rabbitMq lib 封装
 3. 邮件功能

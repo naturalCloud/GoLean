@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/go-basic/uuid"
 	"sync"
+
+	"github.com/go-basic/uuid"
 )
 
 var (
@@ -11,7 +12,7 @@ var (
 	store = make(map[int]string)
 )
 
-//协程 非抢占式 多任务处理,协程主动交出控制权
+// 协程 非抢占式 多任务处理,协程主动交出控制权
 // race 数据冲突调试
 func main() {
 	//routine1()

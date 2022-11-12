@@ -29,24 +29,24 @@ type Server struct {
 	connStop func(connection interfaces.Connection)
 }
 
-//注册OnConnStart 钩子函数
+// 注册OnConnStart 钩子函数
 func (s *Server) SetOnConnStart(start func(connection interfaces.Connection)) {
 	s.connStart = start
 }
 
-//注册OnConnStop 钩子函数
+// 注册OnConnStop 钩子函数
 func (s *Server) SetOnConnStop(stop func(connection interfaces.Connection)) {
 	s.connStop = stop
 }
 
-//调用 OnConnStart 钩子函数
+// 调用 OnConnStart 钩子函数
 func (s *Server) CallOnConnStart(connection interfaces.Connection) {
 	if s.connStart != nil {
 		s.connStart(connection)
 	}
 }
 
-//调用 OnConnStop 钩子函数
+// 调用 OnConnStop 钩子函数
 func (s *Server) CallOnConnStop(connection interfaces.Connection) {
 
 	if s.connStop != nil {
@@ -54,7 +54,7 @@ func (s *Server) CallOnConnStop(connection interfaces.Connection) {
 	}
 }
 
-//开启服务
+// 开启服务
 func (s *Server) Start() {
 
 	zlog.PrintInfof("server %s Host %s Port %d start ", s.Name, s.Host, s.Port)
@@ -88,7 +88,7 @@ func (s *Server) Start() {
 
 }
 
-//停止服务
+// 停止服务
 func (s *Server) Stop() {
 
 	//服务资源回收
@@ -99,7 +99,7 @@ func (s *Server) Stop() {
 
 }
 
-//运行服务
+// 运行服务
 func (s *Server) Serve() {
 
 	if len(s.MsgHandler.MsgHandleMap) <= 0 {
@@ -110,12 +110,12 @@ func (s *Server) Serve() {
 	select {}
 }
 
-//添加router
+// 添加router
 func (s *Server) AddRouter(msgId uint32, router interfaces.Router) {
 	s.MsgHandler.AddRouterMap(msgId, router)
 }
 
-//获取链接管理器
+// 获取链接管理器
 func (s *Server) GetConnManager() interfaces.ConnectionManage {
 	return s.connManager
 }

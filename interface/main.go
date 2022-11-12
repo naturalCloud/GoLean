@@ -54,12 +54,12 @@ func (c car) getValue() float32 {
 	return c.price
 }
 
-//需要传入实现接口的结构体
+// 需要传入实现接口的结构体
 func showValue(asset valuable) {
 	fmt.Printf("value of asset is %f\n", asset.getValue())
 }
 
-//---------------------
+// ---------------------
 func main() {
 	r := Rectangle{5, 3}
 

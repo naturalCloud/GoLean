@@ -11,13 +11,13 @@ type DataPack struct {
 
 const DataHeadLen = 8 //定义数据head头
 
-//获取数据包头的默认长度
+// 获取数据包头的默认长度
 func (d *DataPack) GetHeadLen() uint32 {
 	//4字节长度 unit32  id + 4字节 data len uint32
 	return DataHeadLen
 }
 
-//打包数据为二级制
+// 打包数据为二级制
 func (d *DataPack) Pack(msg interfaces.Message) ([]byte, error) {
 	//创建存放字节的缓冲
 	buffer := bytes.NewBuffer([]byte{})
@@ -42,7 +42,7 @@ func (d *DataPack) Pack(msg interfaces.Message) ([]byte, error) {
 	return buffer.Bytes(), nil
 }
 
-//解包数据
+// 解包数据
 func (d *DataPack) UnPack(data []byte) (interfaces.Message, error) {
 	databuf := bytes.NewReader(data)
 

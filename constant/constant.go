@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-//常量
-//关键字 `const`
+// 常量
+// 关键字 `const`
 const filename = `test/file.txt`
 
-//b, kb, mb, gb, tb , pb
+// b, kb, mb, gb, tb , pb
 const (
 	//iota = 0 自增,
 	b = 1 << (10 * iota)

@@ -12,7 +12,7 @@ type RegisterResponseRoute struct {
 	response login.RegisterResponse
 }
 
-//处理业务中前钩子
+// 处理业务中前钩子
 func (r *RegisterResponseRoute) Handle(request interfaces.Request) {
 	var response login.RegisterResponse
 	r.UnmarshalRequest(request, &response)

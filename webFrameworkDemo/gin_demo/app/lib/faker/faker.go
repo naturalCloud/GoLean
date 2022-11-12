@@ -5,12 +5,13 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/syyongx/php2go"
 	"io/ioutil"
 	"math/big"
 	"speed/app/lib/faker/dataStruct"
 	"strconv"
 	"strings"
+
+	"github.com/syyongx/php2go"
 )
 
 type Faker struct {
@@ -27,7 +28,7 @@ type Faker struct {
 	isInitIDArr   bool                            //是否初始化身份证号段数组
 }
 
-//手机号段
+// 手机号段
 var mobileSegment = []string{
 	"133", "153", "180", "181", "189", "177", "173", "149",
 	"130", "131", "132", "155", "156", "145", "185", "186", "176",
@@ -49,10 +50,10 @@ var mailLast = []string{
 
 var alphabet = []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
-//10个数字
+// 10个数字
 var digit = []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
-//百家姓
+// 百家姓
 var baijiaxing = []string{
 	"赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈", "楮",
 	"卫", "蒋", "沈", "韩", "杨", "朱", "秦", "尤", "许", "何", "吕", "施", "张",
@@ -96,7 +97,7 @@ var baijiaxing = []string{
 	"哈", "谯", "笪", "年", "爱", "阳", "佟", "第五", "言", "福",
 }
 
-//生成手机号
+// 生成手机号
 func (f *Faker) MakeMobile() string {
 	mobile := mobileSegment[f.rand(0, len(mobileSegment)-1)]
 
@@ -130,7 +131,7 @@ func (f *Faker) initNameArr() error {
 
 }
 
-//生成中文名字
+// 生成中文名字
 func (f *Faker) MakeName() (string, error) {
 
 	if !f.isInitNameArr {
@@ -144,7 +145,7 @@ func (f *Faker) MakeName() (string, error) {
 	return xing + name, nil
 }
 
-//随机生成单个全国省市县乡地址
+// 随机生成单个全国省市县乡地址
 func (f *Faker) MakeAddress() string {
 
 	if !f.isInitAddr {
@@ -189,7 +190,7 @@ func (f *Faker) MakeAddress() string {
 	return pstr + cityStr + countryStr + tStr
 }
 
-//生成银行卡号
+// 生成银行卡号
 func (f *Faker) MakeBankCardId() string {
 	bankArea := strconv.Itoa(f.rand(1, 800) + 622126)
 
@@ -244,7 +245,7 @@ func (f *Faker) initIDArray() error {
 
 }
 
-//生成身份证号码
+// 生成身份证号码
 func (f *Faker) MakeIdentificationCard() (string, error) {
 
 	if !f.isInitIDArr {
@@ -335,7 +336,7 @@ func (f *Faker) MakeIdentificationCard() (string, error) {
 
 }
 
-//生成电子邮箱
+// 生成电子邮箱
 func (f *Faker) MakeEmail() string {
 	last := mailLast[f.rand(0, len(mailLast)-1)]
 	var stra, strd = "", ""

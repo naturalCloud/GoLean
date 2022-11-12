@@ -1,6 +1,6 @@
 package main
 
-//内建包
+// 内建包
 func main() {
 
 }

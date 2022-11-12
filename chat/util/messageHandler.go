@@ -36,8 +36,8 @@ func (m *MessageHandler) DoMessageHandle(request interfaces.Request) {
 }
 
 // StarWorkPool StartWorkerPool() 方法是启动Worker工作池， 这里根据用户配置好
-//的 WorkerPoolSize 的数量来启动， 然后分别给每个Worker分配一
-//个 TaskQueue ， 然后用一个goroutine来承载一个Worker的工作业务。
+// 的 WorkerPoolSize 的数量来启动， 然后分别给每个Worker分配一
+// 个 TaskQueue ， 然后用一个goroutine来承载一个Worker的工作业务。
 func (m *MessageHandler) StarWorkPool() {
 	if m.workPoolInitialize {
 		zlog.Info("work pool is running..")
@@ -57,10 +57,10 @@ func (m *MessageHandler) StarWorkPool() {
 	zlog.Infof("work pool init success ,WorkPoolSize is %d ", m.WorkPoolSize)
 }
 
-//启动一个work 进行任务处理
-//StartOneWorker() 方法就是一个Worker的工作业务， 每个worker是不会退出的
-//(目前没有设定worker的停止工作机制)， 会永久的从对应的TaskQueue中等待消
-//息， 并处理
+// 启动一个work 进行任务处理
+// StartOneWorker() 方法就是一个Worker的工作业务， 每个worker是不会退出的
+// (目前没有设定worker的停止工作机制)， 会永久的从对应的TaskQueue中等待消
+// 息， 并处理
 func (m *MessageHandler) startOneWork(workId int, taskQueue chan interfaces.Request) {
 
 	for {

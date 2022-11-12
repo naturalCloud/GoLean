@@ -21,7 +21,7 @@ func (self errorClass) init() *errorClass {
 	}}
 }
 
-//异常处理
+// 异常处理
 func ErrorHandle(writer http.ResponseWriter, err error) {
 
 	code := http.StatusOK

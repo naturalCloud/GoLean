@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//字符串函数
+// 字符串函数
 func main() {
 	// 1 . 子串第一次出现的位置
 	index := strings.Index("abc", "bc")
