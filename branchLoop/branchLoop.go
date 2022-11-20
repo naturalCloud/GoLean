@@ -25,6 +25,9 @@ func main() {
 	//loopFor2()
 	//正常for
 	fmt.Println(loopForNormal())
+	//Block()
+
+	if1()
 }
 
 // if流程控制
@@ -138,4 +141,41 @@ func loopForNormal() int {
 	}
 
 	return sum
+}
+
+// Block 作用域
+//func Block() {
+//	if i := 1; true {
+//		i++
+//		var j = 3
+//		j++
+//	} else {
+//		fmt.Println(i, j)
+//	}
+//
+//	fmt.Println(j)
+//}
+
+//func for1() {
+//
+//	{
+//
+//		for j, k := 0, 5; j < 10; j++ {
+//			fmt.Println(j, k)
+//		}
+//	}
+//	fmt.Println(j)
+//
+//}
+
+func if1() {
+	if a := 1; false {
+
+	} else if b := 2; false {
+
+	} else if c := 3; false {
+
+	} else {
+		fmt.Println(a, b, c)
+	}
 }
