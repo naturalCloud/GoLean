@@ -49,6 +49,7 @@ func main() {
 	data2 := []field{{"four"}, {"five"}, {"six"}}
 
 	for _, f := range data2 {
+		f := f
 		go (*field).print(&f, 3)
 	}
 
