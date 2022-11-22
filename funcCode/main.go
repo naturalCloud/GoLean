@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 // 闭包函数
 func adder() func(int) int {
@@ -37,5 +40,27 @@ func main() {
 	fmt.Println(a(45))
 
 	fmt.Println(sum(9)(5))
+
+	data1 := []*field{{"one"}, {"two"}, {"three"}}
+	for _, f := range data1 {
+		go f.print(3)
+	}
+
+	data2 := []field{{"four"}, {"five"}, {"six"}}
+
+	for _, f := range data2 {
+		go (*field).print(&f, 3)
+	}
+
+	time.Sleep(time.Second * 3)
+
+}
+
+type field struct {
+	name string
+}
+
+func (p field) print(i int) {
+	fmt.Println(p.name)
 
 }
