@@ -3,6 +3,7 @@ package controller
 import (
 	"context"
 	v1 "gfDeomo/api/v1"
+	"gfDeomo/utility/response"
 
 	"github.com/gogf/gf/v2/net/ghttp"
 
@@ -24,5 +25,5 @@ func (c *cHello) Hello(ctx context.Context, req *v1.HelloReq) (res *v1.HelloRes,
 
 func (c cHello) Test1(r *ghttp.Request) {
 	g.Log("aaa").Info(r.Context(), "11111111111111")
-	r.Response.WriteJson(g.Map{"abc": 123445})
+	response.JsonExit(r, 2222, "", g.Map{"abc": 123445})
 }

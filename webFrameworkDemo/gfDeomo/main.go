@@ -8,6 +8,7 @@ import (
 	"github.com/gogf/gf/v2/os/gctx"
 
 	"gfDeomo/internal/cmd"
+	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 )
 
 func main() {

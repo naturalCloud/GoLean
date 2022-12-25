@@ -22,5 +22,5 @@ func (a *sArticle) List(ctx context.Context, req v1.ContentGetListCommonReq) (v1
 
 	articles := dao.Articles.Get(ctx)
 
-	return v1.ArticleIndexRes{Data: articles}, nil
+	return articles, nil
 }
