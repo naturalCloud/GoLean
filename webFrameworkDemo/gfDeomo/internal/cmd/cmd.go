@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"context"
-	"fmt"
 	"gfDeomo/internal/middleware"
 	"gfDeomo/utility/response"
 
@@ -53,7 +52,6 @@ var (
 						//	})
 						//}
 					} else {
-						fmt.Println(5555555555555555)
 						response.JsonExit(r, code.Code(), "", res)
 						//if r.IsAjaxRequest() {
 						//	response.JsonExit(r, code.Code(), "", res)
