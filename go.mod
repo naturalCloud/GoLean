@@ -10,19 +10,19 @@ require (
 	github.com/chromedp/chromedp v0.7.7
 	github.com/cloudflare/tableflip v1.2.2
 	github.com/davecgh/go-spew v1.1.1
-	github.com/gin-gonic/gin v1.9.0
 	github.com/go-basic/uuid v1.0.0
-	github.com/go-playground/validator/v10 v10.12.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/go-vgo/robotgo v0.100.10
 	github.com/golang-module/carbon/v2 v2.1.9
+	github.com/golang/protobuf v1.5.2
 	github.com/jedib0t/go-pretty/v6 v6.0.5
 	github.com/jwalton/gchalk v1.0.3
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/smartystreets/assertions v1.2.0
 	github.com/smartystreets/goconvey v1.6.4
 	github.com/syyongx/php2go v0.9.4
+	github.com/withlin/canal-go v1.1.1
 	github.com/ysmood/got v0.23.3
 	go.uber.org/zap v1.23.0
 	golang.org/x/net v0.8.0
@@ -51,44 +51,36 @@ require (
 	github.com/fyne-io/gl-js v0.0.0-20220119005834-d2da28d9ccfe // indirect
 	github.com/fyne-io/glfw-js v0.0.0-20220120001248-ee7290d23504 // indirect
 	github.com/fyne-io/image v0.0.0-20220602074514-4956b0afb3d2 // indirect
-	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-gl/gl v0.0.0-20211210172815-726fda9656d6 // indirect
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20211213063430-748e38ca8aec // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
-	github.com/go-playground/locales v0.14.1 // indirect
-	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
 	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/gobwas/ws v1.1.0 // indirect
-	github.com/goccy/go-json v0.10.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/goki/freetype v0.0.0-20181231101311-fa8a33aabaff // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/jsummers/gobmp v0.0.0-20151104160322-e2ba15ffa76e // indirect
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/jwalton/go-supportscolor v1.0.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
-	github.com/leodido/go-urn v1.2.2 // indirect
 	github.com/lxn/win v0.0.0-20210218163916-a377121e959e // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/mattn/go-sqlite3 v1.14.10 // indirect
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/otiai10/gosseract v2.2.1+incompatible // indirect
-	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/robotn/gohook v0.31.3 // indirect
 	github.com/robotn/xgb v0.0.0-20190912153532-2cb92d044934 // indirect
 	github.com/robotn/xgbutil v0.0.0-20190912154524-c861d6f87770 // indirect
+	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec // indirect
 	github.com/shirou/gopsutil v3.21.10+incompatible // indirect
 	github.com/srwiley/oksvg v0.0.0-20200311192757-870daf9aa564 // indirect
 	github.com/srwiley/rasterx v0.0.0-20200120212402-85cb7272f5e9 // indirect
@@ -97,7 +89,6 @@ require (
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/tklauser/numcpus v0.3.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
-	github.com/ugorji/go/codec v1.2.9 // indirect
 	github.com/vcaesar/gops v0.21.3 // indirect
 	github.com/vcaesar/imgo v0.30.0 // indirect
 	github.com/vcaesar/keycode v0.10.0 // indirect
@@ -106,7 +97,6 @@ require (
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
 	golang.org/x/arch v0.0.0-20220412001346-fc48f9fe4c15 // indirect
-	golang.org/x/crypto v0.7.0 // indirect
 	golang.org/x/image v0.0.0-20220601225756-64ec528b34cd // indirect
 	golang.org/x/mobile v0.0.0-20211207041440-4e6c2922fdee // indirect
 	golang.org/x/sys v0.6.0 // indirect
