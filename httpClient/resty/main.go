@@ -15,5 +15,4 @@ func main() {
 	var json interface{}
 	sonic.Unmarshal(response.Body(), &json)
 	testTool.Dd(json)
-
 }
