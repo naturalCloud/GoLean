@@ -26,7 +26,7 @@ func Router(c *gin.Engine) {
 	})
 
 	{
-		c.GET("/index", controllers.HelloC.Index)
+		c.GET("/index", controllers.HelloC.Index).Use()
 	}
 	{
 		c.GET("/first", func(context *gin.Context) {
