@@ -38,8 +38,9 @@
 27. [终端表格渲染](tableWriter/main.go)
 28. [go自动化](robotgo/main.go)
 29. [redis缓存](redisApplication)
-    * [redisBigKey](redisApplication/big_key_test.go)
-    * [canal监听Mysql,redis缓存数据同步](redisApplication/big_key_test.go)
+	* [redisBigKey](redisApplication/big_key_test.go)
+	* [canal监听Mysql,redis缓存数据同步](redisApplication/big_key_test.go)
+30. [面向切面(middleware)](pipeline/pipline.go)
 
 ##### 项目实战
 
