@@ -1,6 +1,7 @@
 package pipeline
 
 import (
+	context2 "context"
 	"fmt"
 	"golang.org/x/net/context"
 	"testing"
@@ -60,4 +61,28 @@ func TestPipeline_Run(t *testing.T) {
 			p.Run(tt.args.data)
 		})
 	}
+}
+
+func TestNew(t *testing.T) {
+	New(func(next HandleFunc) HandleFunc {
+		return func(c context2.Context) {
+			fmt.Println("1:before")
+			next(c)
+			fmt.Println("1:after")
+		}
+	}, func(next HandleFunc) HandleFunc {
+		return func(c context2.Context) {
+			fmt.Println("2:before")
+			next(c)
+			fmt.Println("2:after")
+
+		}
+	}, func(next HandleFunc) HandleFunc {
+		return func(c context2.Context) {
+			fmt.Println("3:before")
+			next(c)
+			fmt.Println("3:after")
+
+		}
+	}).Run("hello,testNew")
 }
